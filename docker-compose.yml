@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./secrets:/run/secrets:ro
+    ports:
+      - "${APP_PORT:-55556}:${APP_PORT:-55556}"

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ app_name }}</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <div class="kicker">Orchestrated Betting Intelligence</div>
+          <h1>{{ app_name }}</h1>
+          <p class="subtitle">Sport agents + prop/parlay agents send odds opportunities to Bookie.</p>
+        </div>
+        <div class="chip">Port {{ port }}</div>
+      </header>
+
+      <section class="panel controls-panel">
+        <h2>Swarm Controls</h2>
+        <div class="controls">
+          <label>
+            Scan interval (seconds)
+            <input id="intervalInput" type="number" min="5" max="300" value="20" />
+          </label>
+          <button id="startBtn">Start Swarm</button>
+          <button id="stopBtn" class="secondary">Stop Swarm</button>
+          <button id="scanBtn" class="secondary">Scan Once</button>
+        </div>
+        <div id="status" class="status"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Bookie Recommendations</h2>
+        <div id="recommendations" class="list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>All Opportunities</h2>
+        <div id="opportunities" class="list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Integration Matrix</h2>
+        <div id="integrations" class="integrations"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
